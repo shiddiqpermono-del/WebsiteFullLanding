@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("../assets/lontong.jpg");
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav {
+    display: flex;
+    padding: 3% 8%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s ease;
+}
+.nav-links ul li:hover::after{
+    width: 100%;   
+}
+.text-box{
+    text-align: center;
+    transform: translateY(15vh);
+    margin: auto;
+    width:50%;
+}
+.text-box h1 {
+    color: #fff;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+.text-box p{
+    color: #fff;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+.text-box .btn{
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.text-box .btn:hover{
+    background-color: #f44336;
+    transition: 0.5s ease;
+}
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    nav-links ul li{
+        display: block;
+    }
+    nav-links ul li{
+     position: absolute;
+     background: #f44336;
+     height: 100vh;
+     width: 200px;
+     top: 0;
+     right: -200px;
+     text-align: left;
+     z-index: 2;
+    }
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    nav-links ul {
+        padding: 30px;
+    }
+}
